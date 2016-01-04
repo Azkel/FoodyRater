@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApp.ViewModels.Manage
+namespace FoodyRater.Web.ViewModels.Manage
 {
     public class AddPhoneNumberViewModel
     {

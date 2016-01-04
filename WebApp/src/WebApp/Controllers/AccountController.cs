@@ -9,11 +9,11 @@ using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Logging;
-using WebApp.Models;
-using WebApp.Services;
-using WebApp.ViewModels.Account;
+using FoodyRater.Web.Models;
+using FoodyRater.Web.Services;
+using FoodyRater.Web.ViewModels.Account;
 
-namespace WebApp.Controllers
+namespace FoodyRater.Web.Controllers
 {
     [Authorize]
     public class AccountController : Controller

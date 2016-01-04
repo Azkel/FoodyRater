@@ -6,9 +6,9 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using WebApp.Models;
+using FoodyRater.Web.Models;
 
-namespace WebApp.Migrations
+namespace FoodyRater.Web.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot

@@ -7,13 +7,13 @@ using Microsoft.AspNet.Authentication.Google;
 using Microsoft.AspNet.Authentication.Cookies;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using WebApp.Models;
-using WebApp.Services;
+using FoodyRater.Web.Models;
+using FoodyRater.Web.Services;
 using Microsoft.AspNet.Authentication.OAuth;
 using Microsoft.Extensions.WebEncoders;
 using System.Threading.Tasks;
 
-namespace WebApp
+namespace FoodyRater.Web
 {
     public class Startup
     {

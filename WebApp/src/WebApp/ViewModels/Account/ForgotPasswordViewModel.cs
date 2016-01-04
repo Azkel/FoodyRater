@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApp.ViewModels.Account
+namespace FoodyRater.Web.ViewModels.Account
 {
     public class ForgotPasswordViewModel
     {

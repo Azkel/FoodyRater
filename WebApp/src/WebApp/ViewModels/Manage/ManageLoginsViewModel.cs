@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Http.Authentication;
 using Microsoft.AspNet.Identity;
 
-namespace WebApp.ViewModels.Manage
+namespace FoodyRater.Web.ViewModels.Manage
 {
     public class ManageLoginsViewModel
     {

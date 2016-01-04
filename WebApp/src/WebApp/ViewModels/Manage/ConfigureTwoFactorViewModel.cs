@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc.Rendering;
 
-namespace WebApp.ViewModels.Manage
+namespace FoodyRater.Web.ViewModels.Manage
 {
     public class ConfigureTwoFactorViewModel
     {

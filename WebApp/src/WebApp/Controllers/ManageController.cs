@@ -7,11 +7,11 @@ using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Logging;
-using WebApp.Models;
-using WebApp.Services;
-using WebApp.ViewModels.Manage;
+using FoodyRater.Web.Models;
+using FoodyRater.Web.Services;
+using FoodyRater.Web.ViewModels.Manage;
 
-namespace WebApp.Controllers
+namespace FoodyRater.Web.Controllers
 {
     [Authorize]
     public class ManageController : Controller
