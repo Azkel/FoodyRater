@@ -174,8 +174,9 @@ namespace FoodyRater.Web.Controllers
         }
 
         //
-        // GET: /Manage/RemovePhoneNumber
-        [HttpGet]
+        // POST: /Manage/RemovePhoneNumber
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> RemovePhoneNumber()
         {
             var user = await GetCurrentUserAsync();

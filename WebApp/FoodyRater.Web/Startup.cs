@@ -1,17 +1,16 @@
-﻿using Microsoft.AspNet.Builder;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
-using Microsoft.AspNet.Authentication.Google;
-using Microsoft.AspNet.Authentication.Cookies;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using FoodyRater.Web.Models;
 using FoodyRater.Web.Services;
-using Microsoft.AspNet.Authentication.OAuth;
-using Microsoft.Extensions.WebEncoders;
-using System.Threading.Tasks;
 
 namespace FoodyRater.Web
 {
@@ -55,18 +54,11 @@ namespace FoodyRater.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-
-            services.AddMvc(options =>
-            {
-                // Only use HTTPS protocol
-                options.Filters.Add(new Microsoft.AspNet.Mvc.RequireHttpsAttribute());
-            });
+            services.AddMvc();
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
-
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -108,14 +100,6 @@ namespace FoodyRater.Web
 
             app.UseIdentity();
 
-            app.UseGoogleAuthentication(options =>
-            {
-                options.ClientId = Configuration["Authentication:Google:ClientId"];
-                options.ClientSecret = Configuration["Authentication:Google:Secret"];
-                //options.AuthenticationScheme = "Google";
-                //options.SignInScheme = "Cookies";
-            });
-
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
 
             app.UseMvc(routes =>
@@ -128,6 +112,5 @@ namespace FoodyRater.Web
 
         // Entry point for the application.
         public static void Main(string[] args) => WebApplication.Run<Startup>(args);
-
     }
 }

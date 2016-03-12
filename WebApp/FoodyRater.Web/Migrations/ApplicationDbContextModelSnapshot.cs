@@ -98,7 +98,7 @@ namespace FoodyRater.Web.Migrations
                     b.HasAnnotation("Relational:TableName", "AspNetUserRoles");
                 });
 
-            modelBuilder.Entity("WebApp.Models.ApplicationUser", b =>
+            modelBuilder.Entity("FoodyRater.Web.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id");
 
@@ -155,14 +155,14 @@ namespace FoodyRater.Web.Migrations
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("WebApp.Models.ApplicationUser")
+                    b.HasOne("FoodyRater.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("WebApp.Models.ApplicationUser")
+                    b.HasOne("FoodyRater.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
@@ -173,7 +173,7 @@ namespace FoodyRater.Web.Migrations
                         .WithMany()
                         .HasForeignKey("RoleId");
 
-                    b.HasOne("WebApp.Models.ApplicationUser")
+                    b.HasOne("FoodyRater.Web.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });

@@ -1,9 +1,5 @@
 {
   "name": "ASP.NET",
   "private": true,
-  "dependencies": {
-    "jquery-validation": "1.14.0",
-    "jquery-validation-unobtrusive": "3.2.4",
-    "admin-lte": "~2.3.2"
-  }
+  "dependencies": {}
 }
